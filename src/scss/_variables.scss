@@ -2,23 +2,6 @@
 //Variables
 /*============================================================================*/
 
-// path
-// =========================================================
-
-//$root-path:                                                    "../";
-
-@function path($value: img) {
-  @if $value == js {
-    @return "assets/js";
-  }
-  @if $value == css {
-    @return "assets/css";
-  }
-  @if $value == img {
-    @return "assets/images";
-  }
-}
-
 
 // Main Colors
 // =========================================================
@@ -31,49 +14,44 @@ $g-theme-color-04:                                               #F3F6F9 !defaul
 $g-theme-color-05:                                               #657382!default;
 $g-theme-color-06:                                               #fafafa !default;
 
-.g-theme-color-01-txt {color: $g-theme-color-01;}
-.g-theme-color-02-txt {color: $g-theme-color-02;}
-.g-theme-color-03-txt {color: $g-theme-color-03;}
-.g-theme-color-04-txt {color: $g-theme-color-04;}
-.g-theme-color-05-txt {color: $g-theme-color-05;}
-.g-theme-color-06-txt {color: $g-theme-color-06;}
-
-.g-theme-color-01-bg {background-color: $g-theme-color-01;}
-.g-theme-color-01-dark-bg {background-color: darken($g-theme-color-01, 7.5%) ;}
-.g-theme-color-01-light-bg {background-color: lighten($g-theme-color-01, 7.5%) ;}
-.g-theme-color-02-bg {background-color: $g-theme-color-02;}
-.g-theme-color-02-dark-bg {background-color: darken($g-theme-color-02, 7.5%) ;}
-.g-theme-color-02-light-bg {background-color: lighten($g-theme-color-02, 7.5%) ;}
-.g-theme-color-03-bg {background-color: $g-theme-color-03;}
-.g-theme-color-03-dark-bg {background-color: darken($g-theme-color-03, 7.5%) ;}
-.g-theme-color-03-light-bg {background-color: lighten($g-theme-color-03, 7.5%) ;}
-.g-theme-color-04-bg {background-color: $g-theme-color-04;}
-.g-theme-color-04-dark-bg {background-color: darken($g-theme-color-04, 7.5%) ;}
-.g-theme-color-04-light-bg {background-color: lighten($g-theme-color-04, 7.5%) ;}
-.g-theme-color-05-bg {background-color: $g-theme-color-05;}
-.g-theme-color-05-dark-bg {background-color: darken($g-theme-color-05, 7.5%) ;}
-.g-theme-color-05-light-bg {background-color: lighten($g-theme-color-05, 7.5%) ;}
-.g-theme-color-06-bg {background-color: $g-theme-color-06;}
-.g-theme-color-06-dark-bg {background-color: darken($g-theme-color-06, 7.5%) ;}
-.g-theme-color-06-light-bg {background-color: lighten($g-theme-color-06, 7.5%) ;}
-
-
-// Fonts
-// =========================================================
+.is_theme01 {
+  background-color: $g-theme-color-01;
+  color: $g-theme-color-06;
+}
+.is_theme02 {
+  background-color: $g-theme-color-02;
+  color: $g-theme-color-06;
+}
+.is_theme03 {
+  background-color: $g-theme-color-03;
+  color: $g-theme-color-06;
+}
+.is_theme04 {
+  background-color: $g-theme-color-04;
+  color: $g-theme-color-03;
+}
+.is_theme05 {
+  background-color: $g-theme-color-05;
+  color: $g-theme-color-06;
+}
+.is_theme06 {
+  background-color: $g-theme-color-06;
+  color: $g-theme-color-03;
+}
 
 // Font Colors
 $g-font-color:                                                   $g-theme-color-05 !default;
+$g-bg-color:                                                     #fff !default;
 
 // Links (Style anchor elements)
 $g-link-color:                                                   $g-theme-color-02!default;
 $g-link-color-hover:                                             darken($g-link-color, 7.5%) !default;
-$g-link-hover-decoration:                                        none !default;
 
 // Font Families
 $g-font-kaku:"メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !default;
 $g-font-maru: "Lucida Grande", "segoe UI", "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif !default;
-$g-font-primary: $g-font-kaku;
 
+$g-font-primary: $g-font-kaku;
 $g-font-secondary: "Roboto Slab", Helvetica, Arial, sans-serif !default;
 $g-font-code: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $g-font-niconne: "Niconne", cursive !default;
@@ -89,33 +67,6 @@ $g-font-body-base: (16 * $g-font-body-ratio / 100);
 }
 .fw-bold {
   font-weight: bold;
-}
-.fw100 {
-  font-weight: 100;
-}
-.fw200 {
-  font-weight: 200;
-}
-.fw300 {
-  font-weight: 300;
-}
-.fw400 {
-  font-weight: 400;
-}
-.fw500 {
-  font-weight: 500;
-}
-.fw600 {
-  font-weight: 600;
-}
-.fw700 {
-  font-weight: 700;
-}
-.fw800 {
-  font-weight: 800;
-}
-.fw900 {
-  font-weight: 900;
 }
 
 // Breakpoints
@@ -147,16 +98,6 @@ $g-bp: (
 @function bp($value: md) {
   @return map-get($g-bp, $value);
 }
-
-// Shadows
-// =========================================================
-
-.bs {
-  //box-shadow: 0 0px 1px rgba(0, 0, 0, 0.15);
-  //box-shadow: 0 1px 4px 0 rgba(0,0,0,0.16), 0 0 1px 0 rgba(0,0,0,0.16);
-  border: 1px solid #e6e7e9;
-}
-
 
 // Color Pallet
 // =============================================================
@@ -522,13 +463,3 @@ $blue-grey: (
   800:  #37474f,
   900:  #263238
 );
-
-// Customize
-.bg-grey-light {
-  background-color: color($grey, 50);
-}
-
-.is_theme01 {
-  background-color: $g-theme-color-01;
-  color: $g-white;
-}

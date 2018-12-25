@@ -19,10 +19,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-@import "variables";
-@import "mixins/main";
-// @import "reset/ress";
-@import "reset/reset";
-@import "common/class";
-@import "common/grid";
-@import "pages/main";
+@import "variables";// theme colors, font, break points etc...
+@import "mixins/main";// mixin
+@import "reset/reset";// bulma reset
+@import "common/class";// custom class
+@import "common/grid";// grid system
+@import "pages/main";// pages custom

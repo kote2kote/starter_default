@@ -1125,40 +1125,4 @@ other class
       // @include rem("padding-left", 20);
       // @include rem("padding-right", 20);
   }
-
-  // .row {
-  //   @include rem("margin", 0, 20);
-  //   @include bp(xl) {
-  //     @include rem("margin", 0, 20);
-  //   }
-  //   @include bp(lg) {
-  //     @include rem("margin", 0, 0);
-  //   }
-  // }
 }
-
-@mixin gutter($gutter: 10, $width: l) {
-  $a: $gutter;
-  $b: $a / 3;
-  $c: $b * 2;
-
-  @if $width == l {
-    @include rem("padding", 0, $c, 0, 0);
-    @include bp(md) {
-      @include rem("padding", 0);
-    }
-  }
-  @if $width == c {
-    @include rem("padding", 0, $b);
-    @include bp(md) {
-      @include rem("padding", 0);
-    }
-  }
-  @if $width == r {
-    @include rem("padding", 0, 0, 0, $c);
-    @include bp(md) {
-      @include rem("padding", 0);
-    }
-  }
-}
-

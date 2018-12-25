@@ -3,30 +3,30 @@ Respond
 ===========================================================*/
 @mixin bp($value: md) {
     @if $value == sm {
-        @media only screen and (max-width: bp(sm)) { @content };    //576
+        @media only screen and (max-width: bp(sm)) { @content };    //under 576px
     }
     @if $value == md {
-        @media only screen and (max-width: bp(md)) { @content };     //768
+        @media only screen and (max-width: bp(md)) { @content };     //under 768px
     }
     @if $value == lg {
-        @media only screen and (max-width: bp(lg)) { @content };    //992
+        @media only screen and (max-width: bp(lg)) { @content };    //under 992px
     }
     @if $value == xl {
-        @media only screen and (max-width: bp(xl)) { @content };    //1200
+        @media only screen and (max-width: bp(xl)) { @content };    //under 1200px
     }
 }
 @mixin bp-min($value: md) {
     @if $value == sm {
-        @media only screen and (min-width: bp(sm)) { @content };    //576
+        @media only screen and (min-width: bp(sm)) { @content };    //below 576px
     }
     @if $value == md {
-        @media only screen and (min-width: bp(md)) { @content };     //768
+        @media only screen and (min-width: bp(md)) { @content };     //below 768px
     }
     @if $value == lg {
-        @media only screen and (min-width: bp(lg)) { @content };    //992
+        @media only screen and (min-width: bp(lg)) { @content };    //below 992px
     }
     @if $value == xl {
-        @media only screen and (min-width: bp(xl)) { @content };    //1200
+        @media only screen and (min-width: bp(xl)) { @content };    //below 1200px
     }
 }
 

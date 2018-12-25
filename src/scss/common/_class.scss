@@ -1,16 +1,7 @@
 /*==========================================================
-font-size
-===========================================================*/
-@for $i from 10 through 30 {
- .fz#{$i} {
-     @include rem("font-size", $i);
- }
-}
-
-/*==========================================================
 margin padding set
 ===========================================================*/
-
+// padding and margin 1-10
 $every: 1;
 @for $i from 0 through 10 {
     .pd#{$i * $every} {
@@ -45,6 +36,7 @@ $every: 1;
     }
   }
   
+// padding and margin 0,5,10,15, ...50
 $every: 5;
 @for $i from 0 through 10 {
     .pd#{$i * $every} {
@@ -80,115 +72,20 @@ $every: 5;
   }
   
 /*==========================================================
- min-height/min_width
+align
 ===========================================================*/
-// $every: 100;
-// @for $i from 0 through 10 {
-//     .mh#{$i * $every} {
-//       @include rem("min-height", $i * $every);
-//     }
-//     .mw#{$i * $every} {
-//       @include rem("min-width", $i * $every);
-//     }
-//   }
-  
+.align-center {text-align: center;}
+.align-left {text-align: left;}
+.align-right {text-align: right;}
+
 /*==========================================================
-bg-color
+flexbox
 ===========================================================*/
-// @each $modifier, $color in $red {
-//     .bg_red-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $pink {
-//     .bg_pink-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $purple {
-//     .bg_purple-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $deep-purple {
-//     .bg_dp-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $indigo {
-//     .bg_indigo-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $blue {
-//     .bg_blue-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $light-blue {
-//     .bg_lb-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $cyan {
-//     .bg_cyan-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $teal {
-//     .bg_teal-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $green {
-//     .bg_green-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $light-green {
-//     .bg_lg-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $lime {
-//     .bg_lime-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $yellow {
-//     .bg_yellow-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $amber{
-//     .bg_amber-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $orange {
-//     .bg_orange-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $deep-orange {
-//     .bg_do-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $brown {
-//     .bg_brown-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $grey {
-//     .bg_grey-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-//   @each $modifier, $color in $blue-grey {
-//     .bg_bg-#{$modifier} {
-//       background: $color;
-//     }
-//   }
-
-
+.flex {display:flex;}
+.flex-justify-center {justify-content: center;}
+.flex-justify-sb {justify-content: space-between;}
+.flex-align-c {align-items: center;}
+.flex-wrap {flex-wrap: wrap;}
+.flex-nowrap {flex-wrap: nowrap;}
+.d-b {display: block;}
+.d-ib {display: inline-block;}
