@@ -1,0 +1,32 @@
+//hack IE
+@mixin hack($hack-ver:'') {
+  //IE8 hack
+    @if $hack-ver == "ie8" {
+        @media \0screen {
+            @content;
+        }
+    }
+    // * IE9-10 hack(add propary \9)
+    @else if $hack-ver == "ie9-10" {
+        @media all and (min-width:0\0) {
+            @content;
+        }
+    }
+    // * IE10 hack(add propary \9)
+    @else if $hack-ver == "ie10" {
+        @media all and (-ms-high-contrast:none\0) {
+            @content;
+        }
+    }
+    // * IE11 hack(add selector *::-ms-backdrop)
+    @else if $hack-ver == "ie11" {
+        @media all and (-ms-high-contrast:none\0) {
+            @content;
+        }
+    }
+    @else if $hack-ver == "edge" {
+        @supports (-ms-ime-align: auto) {
+            @content;
+        }
+    }
+}

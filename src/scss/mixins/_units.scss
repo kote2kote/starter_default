@@ -1,0 +1,34 @@
+//
+// Convert px to rem
+//
+
+// Function for converting a px based font-size to rem.
+// @function parseInt($n) {
+//   @if ($n == !important) {
+//     @return !important
+//   } @else {
+//     @if $g-font-1rem-10px == true {
+//       $rem-size: $n / 10px;
+//       @return #{$rem-size}rem;
+//     } @else {
+//       $rem-size: $n / $g-font-primary-size * px;
+//       @return #{$rem-size}rem;
+//     }
+//     //$rem-size: $n / 14px;
+//     //@return #{$rem-size}rem;
+//   }
+// }
+
+// // e.g. @include px-to-rem(padding, 8px 20px);
+// @mixin px-to-rem($property, $values) {
+//   $rem: ();
+//   @each $value in $values {
+//     @if index((0, 0px), $value) or $value == auto {
+//       $rem: append($rem, $value);
+//     }
+//     @else {
+//       $rem: append($rem, parseInt($value));
+//     }
+//   }
+//   #{$property}: $rem;
+// }

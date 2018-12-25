@@ -1,0 +1,1164 @@
+/*==========================================================
+grid system
+===========================================================*/
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* nested grids */
+.grid .grid, .grid.nested {
+  flex: 1 1 auto;
+}
+
+/* center grids */
+.grid.center {
+  justify-content: center;
+}
+
+@mixin col() {
+  flex: 1 1;
+  //margin: 0;
+  //padding: 0;
+}
+
+.col {
+  @include col();//同列のbox要素の中で固定幅のものがあった場合
+}
+
+/* 少数グリッド中央寄せ */
+@for $i from 1 through 12 {
+  .center .col-#{$i} {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .center .col-sm-#{$i} {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .center .col-md-#{$i} {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .center .col-lg-#{$i} {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .center .col-xl-#{$i} {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* レスポンシブ幅以上で横幅100% */
+.col-sm {
+  flex-basis: 100%;
+  max-width: 100%;
+  @include bp(sm) {
+    @include col();
+  }
+}
+
+.col-md {
+  flex-basis: 100%;
+  max-width: 100%;
+  @include bp(md) {
+    @include col();
+  }
+}
+
+.col-lg {
+  flex-basis: 100%;
+  max-width: 100%;
+  @include bp(lg) {
+    @include col();
+  }
+}
+
+.col-xl {
+  flex-basis: 100%;
+  max-width: 100%;
+  @include bp(xl) {
+    @include col();
+  }
+}
+
+/* columns widths */
+.col-1 {
+  @include col();
+  flex-basis: 8.3333%;
+  max-width: 8.3333%;
+}
+
+.col-sm-1 {
+  @include col();
+  flex-basis: 8.3333%;
+  max-width: 8.3333%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-1-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 8.3333%;
+    max-width: 8.3333%;
+  }
+}
+
+.col-md-1 {
+  @include col();
+  flex-basis: 8.3333%;
+  max-width: 8.3333%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-1-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 8.3333%;
+    max-width: 8.3333%;
+  }
+}
+
+.col-lg-1 {
+  @include col();
+  flex-basis: 8.3333%;
+  max-width: 8.3333%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-1-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 8.3333%;
+    max-width: 8.3333%;
+  }
+}
+
+.col-xl-1 {
+  @include col();
+  flex-basis: 8.3333%;
+  max-width: 8.3333%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-1-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 8.3333%;
+    max-width: 8.3333%;
+  }
+}
+
+.col-2 {
+  @include col();
+  flex-basis: 16.6666%;
+  max-width: 16.6666%;
+}
+
+.col-sm-2 {
+  @include col();
+  flex-basis: 16.6666%;
+  max-width: 16.6666%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-2-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 16.6666%;
+    max-width: 16.6666%;
+  }
+}
+
+.col-md-2 {
+  @include col();
+  flex-basis: 16.6666%;
+  max-width: 16.6666%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-2-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 16.6666%;
+    max-width: 16.6666%;
+  }
+}
+
+.col-lg-2 {
+  @include col();
+  flex-basis: 16.6666%;
+  max-width: 16.6666%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-2-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 16.6666%;
+    max-width: 16.6666%;
+  }
+}
+
+.col-xl-2 {
+  @include col();
+  flex-basis: 16.6666%;
+  max-width: 16.6666%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-2-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 16.6666%;
+    max-width: 16.6666%;
+  }
+}
+
+.col-3 {
+  @include col();
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.col-sm-3 {
+  @include col();
+  flex-basis: 25%;
+  max-width: 25%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-3-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+.col-md-3 {
+  @include col();
+  flex-basis: 25%;
+  max-width: 25%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-3-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+.col-lg-3 {
+  @include col();
+  flex-basis: 25%;
+  max-width: 25%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-3-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+.col-xl-3 {
+  @include col();
+  flex-basis: 25%;
+  max-width: 25%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-3-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+.col-4 {
+  @include col();
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+}
+
+.col-sm-4 {
+  @include col();
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-4-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+.col-md-4 {
+  @include col();
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-4-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+.col-lg-4 {
+  @include col();
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-4-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+.col-xl-4 {
+  @include col();
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-4-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+.col-5 {
+  @include col();
+  flex-basis: 41.6666%;
+  max-width: 41.6666%;
+}
+
+.col-sm-5 {
+  @include col();
+  flex-basis: 41.6666%;
+  max-width: 41.6666%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-5-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 41.6666%;
+    max-width: 41.6666%;
+  }
+}
+
+.col-md-5 {
+  @include col();
+  flex-basis: 41.6666%;
+  max-width: 41.6666%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-5-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 41.6666%;
+    max-width: 41.6666%;
+  }
+}
+
+.col-lg-5 {
+  @include col();
+  flex-basis: 41.6666%;
+  max-width: 41.6666%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-5-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 41.6666%;
+    max-width: 41.6666%;
+  }
+}
+
+.col-xl-5 {
+  @include col();
+  flex-basis: 41.6666%;
+  max-width: 41.6666%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-5-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 41.6666%;
+    max-width: 41.6666%;
+  }
+}
+
+.col-6 {
+  @include col();
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.col-sm-6 {
+  @include col();
+  flex-basis: 50%;
+  max-width: 50%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-6-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+.col-md-6 {
+  @include col();
+  flex-basis: 50%;
+  max-width: 50%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-6-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+.col-lg-6 {
+  @include col();
+  flex-basis: 50%;
+  max-width: 50%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-6-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+.col-xl-6 {
+  @include col();
+  flex-basis: 50%;
+  max-width: 50%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-6-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+.col-7 {
+  @include col();
+  flex-basis: 58.3333%;
+  max-width: 58.3333%;
+}
+
+.col-sm-7 {
+  @include col();
+  flex-basis: 58.3333%;
+  max-width: 58.3333%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-7-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 58.3333%;
+    max-width: 58.3333%;
+  }
+}
+
+.col-md-7 {
+  @include col();
+  flex-basis: 58.3333%;
+  max-width: 58.3333%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-7-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 58.3333%;
+    max-width: 58.3333%;
+  }
+}
+
+.col-lg-7 {
+  @include col();
+  flex-basis: 58.3333%;
+  max-width: 58.3333%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-7-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 58.3333%;
+    max-width: 58.3333%;
+  }
+}
+
+.col-xl-7 {
+  @include col();
+  flex-basis: 58.3333%;
+  max-width: 58.3333%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-7-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 58.3333%;
+    max-width: 58.3333%;
+  }
+}
+
+.col-8 {
+  @include col();
+  flex-basis: 66.6666%;
+  max-width: 66.6666%;
+}
+
+.col-sm-8 {
+  @include col();
+  flex-basis: 66.6666%;
+  max-width: 66.6666%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-8-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 66.6666%;
+    max-width: 66.6666%;
+  }
+}
+
+.col-md-8 {
+  @include col();
+  flex-basis: 66.6666%;
+  max-width: 66.6666%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-8-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 66.6666%;
+    max-width: 66.6666%;
+  }
+}
+
+.col-lg-8 {
+  @include col();
+  flex-basis: 66.6666%;
+  max-width: 66.6666%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-8-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 66.6666%;
+    max-width: 66.6666%;
+  }
+}
+
+.col-xl-8 {
+  @include col();
+  flex-basis: 66.6666%;
+  max-width: 66.6666%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-8-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 66.6666%;
+    max-width: 66.6666%;
+  }
+}
+
+.col-9 {
+  @include col();
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.col-sm-9 {
+  @include col();
+  flex-basis: 75%;
+  max-width: 75%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-9-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+}
+
+.col-md-9 {
+  @include col();
+  flex-basis: 75%;
+  max-width: 75%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-9-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+}
+
+.col-lg-9 {
+  @include col();
+  flex-basis: 75%;
+  max-width: 75%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-9-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+}
+
+.col-xl-9 {
+  @include col();
+  flex-basis: 75%;
+  max-width: 75%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-9-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+}
+
+.col-10 {
+  @include col();
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+}
+
+.col-sm-10 {
+  @include col();
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-10-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 83.3333%;
+    max-width: 83.3333%;
+  }
+}
+
+.col-md-10 {
+  @include col();
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-10-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 83.3333%;
+    max-width: 83.3333%;
+  }
+}
+
+.col-lg-10 {
+  @include col();
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-10-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 83.3333%;
+    max-width: 83.3333%;
+  }
+}
+
+.col-xl-10 {
+  @include col();
+  flex-basis: 83.3333%;
+  max-width: 83.3333%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-10-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 83.3333%;
+    max-width: 83.3333%;
+  }
+}
+
+.col-11 {
+  @include col();
+  flex-basis: 91.6666%;
+  max-width: 91.6666%;
+}
+
+.col-sm-11 {
+  @include col();
+  flex-basis: 91.6666%;
+  max-width: 91.6666%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-11-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 91.6666%;
+    max-width: 91.6666%;
+  }
+}
+
+.col-md-11 {
+  @include col();
+  flex-basis: 91.6666%;
+  max-width: 91.6666%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-11-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 91.6666%;
+    max-width: 91.6666%;
+  }
+}
+
+.col-lg-11 {
+  @include col();
+  flex-basis: 91.6666%;
+  max-width: 91.6666%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-11-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 91.6666%;
+    max-width: 91.6666%;
+  }
+}
+
+.col-xl-11 {
+  @include col();
+  flex-basis: 91.6666%;
+  max-width: 91.6666%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-11-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 91.6666%;
+    max-width: 91.6666%;
+  }
+}
+
+.col-12 {
+  @include col();
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.col-sm-12 {
+  @include col();
+  flex-basis: 100%;
+  max-width: 100%;
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-12-sm {
+  @include bp(sm) {
+    @include col();
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.col-md-12 {
+  @include col();
+  flex-basis: 100%;
+  max-width: 100%;
+  @include bp(md) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-12-md {
+  @include bp(md) {
+    @include col();
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-12 {
+  @include col();
+  flex-basis: 100%;
+  max-width: 100%;
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-12-lg {
+  @include bp(lg) {
+    @include col();
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.col-xl-12 {
+  @include col();
+  flex-basis: 100%;
+  max-width: 100%;
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.col-12-xl {
+  @include bp(xl) {
+    @include col();
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.sm-100 {
+  @include bp(sm) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.md-100 {
+  @include bp(md) {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    margin: 0;
+  }
+}
+
+.lg-100 {
+  @include bp(lg) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.xl-100 {
+  @include bp(xl) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+/*==========================================================
+other class
+===========================================================*/
+  
+.section-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: bp(xl);
+
+  @include bp(lg) {
+      max-width: bp(lg);
+      // @include rem("margin-left", 20);
+      // @include rem("margin-right", 20);
+  }
+  @include bp() {
+      max-width: bp();
+      // @include rem("padding-left", 20);
+      // @include rem("padding-right", 20);
+  }
+  @include bp(sm) {
+      max-width: bp(sm);
+      // @include rem("padding-left", 20);
+      // @include rem("padding-right", 20);
+  }
+
+  // .row {
+  //   @include rem("margin", 0, 20);
+  //   @include bp(xl) {
+  //     @include rem("margin", 0, 20);
+  //   }
+  //   @include bp(lg) {
+  //     @include rem("margin", 0, 0);
+  //   }
+  // }
+}
+
+@mixin gutter($gutter: 10, $width: l) {
+  $a: $gutter;
+  $b: $a / 3;
+  $c: $b * 2;
+
+  @if $width == l {
+    @include rem("padding", 0, $c, 0, 0);
+    @include bp(md) {
+      @include rem("padding", 0);
+    }
+  }
+  @if $width == c {
+    @include rem("padding", 0, $b);
+    @include bp(md) {
+      @include rem("padding", 0);
+    }
+  }
+  @if $width == r {
+    @include rem("padding", 0, 0, 0, $c);
+    @include bp(md) {
+      @include rem("padding", 0);
+    }
+  }
+}
+

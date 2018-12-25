@@ -1,0 +1,27 @@
+@mixin outside-center {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  position: relative;
+}
+
+@mixin center($position: abs) {
+  @if $position == fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@mixin heroImage($height:100vh, $url:"https://via.placeholder.com/1920x1080/27709b/ffffff?text=Image") {
+  height: $height;
+  background-image: url("#{$url}");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

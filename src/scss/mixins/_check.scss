@@ -1,0 +1,31 @@
+/*==========================================================
+Check
+===========================================================*/
+
+@mixin ck() {
+  background: rgba(152, 214, 245, .5);
+  border: 1px solid rgba(86,61,124,.2);
+  min-height: 50px;
+}
+
+.ck {
+  @include ck();
+}
+
+/*==========================================================
+check_mode = cm
+===========================================================*/
+.cm50 {
+  background: rgba(152, 214, 245, .5);
+  border: 1px solid rgba(86,61,124,.2);
+  @include rem("min-height", 50);
+}
+
+$every: 100;
+@for $i from 0 through 10 {
+  .cm#{$i * $every} {
+    background: rgba(152, 214, 245, .5);
+    border: 1px solid rgba(86,61,124,.2);
+    @include rem("min-height", $i * $every);
+  }
+}

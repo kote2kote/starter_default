@@ -1,0 +1,194 @@
+/*==========================================================
+font-size
+===========================================================*/
+@for $i from 10 through 30 {
+ .fz#{$i} {
+     @include rem("font-size", $i);
+ }
+}
+
+/*==========================================================
+margin padding set
+===========================================================*/
+
+$every: 1;
+@for $i from 0 through 10 {
+    .pd#{$i * $every} {
+      @include rem("padding", $i * $every);
+    }
+    .pd-t#{$i * $every} {
+      @include rem("padding-top", $i * $every);
+    }
+    .pd-b#{$i * $every} {
+      @include rem("padding-bottom", $i * $every);
+    }
+    .pd-l#{$i * $every} {
+      @include rem("padding-left", $i * $every);
+    }
+    .pd-r#{$i * $every} {
+      @include rem("padding-right", $i * $every);
+    }
+    .mg#{$i * $every} {
+      @include rem("margin", $i * $every);
+    }
+    .mg-t#{$i * $every} {
+      @include rem("margin-top", $i * $every);
+    }
+    .mg-b#{$i * $every} {
+      @include rem("margin-bottom", $i * $every);
+    }
+    .mg-l#{$i * $every} {
+      @include rem("margin-left", $i * $every);
+    }
+    .mg-r#{$i * $every} {
+      @include rem("margin-right", $i * $every);
+    }
+  }
+  
+$every: 5;
+@for $i from 0 through 10 {
+    .pd#{$i * $every} {
+      @include rem("padding", $i * $every);
+    }
+    .pd-t#{$i * $every} {
+      @include rem("padding-top", $i * $every);
+    }
+    .pd-b#{$i * $every} {
+      @include rem("padding-bottom", $i * $every);
+    }
+    .pd-l#{$i * $every} {
+      @include rem("padding-left", $i * $every);
+    }
+    .pd-r#{$i * $every} {
+      @include rem("padding-right", $i * $every);
+    }
+    .mg#{$i * $every} {
+      @include rem("margin", $i * $every);
+    }
+    .mg-t#{$i * $every} {
+      @include rem("margin-top", $i * $every);
+    }
+    .mg-b#{$i * $every} {
+      @include rem("margin-bottom", $i * $every);
+    }
+    .mg-l#{$i * $every} {
+      @include rem("margin-left", $i * $every);
+    }
+    .mg-r#{$i * $every} {
+      @include rem("margin-right", $i * $every);
+    }
+  }
+  
+/*==========================================================
+ min-height/min_width
+===========================================================*/
+// $every: 100;
+// @for $i from 0 through 10 {
+//     .mh#{$i * $every} {
+//       @include rem("min-height", $i * $every);
+//     }
+//     .mw#{$i * $every} {
+//       @include rem("min-width", $i * $every);
+//     }
+//   }
+  
+/*==========================================================
+bg-color
+===========================================================*/
+// @each $modifier, $color in $red {
+//     .bg_red-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $pink {
+//     .bg_pink-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $purple {
+//     .bg_purple-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $deep-purple {
+//     .bg_dp-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $indigo {
+//     .bg_indigo-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $blue {
+//     .bg_blue-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $light-blue {
+//     .bg_lb-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $cyan {
+//     .bg_cyan-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $teal {
+//     .bg_teal-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $green {
+//     .bg_green-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $light-green {
+//     .bg_lg-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $lime {
+//     .bg_lime-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $yellow {
+//     .bg_yellow-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $amber{
+//     .bg_amber-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $orange {
+//     .bg_orange-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $deep-orange {
+//     .bg_do-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $brown {
+//     .bg_brown-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $grey {
+//     .bg_grey-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+//   @each $modifier, $color in $blue-grey {
+//     .bg_bg-#{$modifier} {
+//       background: $color;
+//     }
+//   }
+
+

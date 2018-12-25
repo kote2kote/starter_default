@@ -1,0 +1,18 @@
+{
+  "name": "kote2",
+  "description": "test site",
+  "main": "index.html",
+  "authors": [
+    "kote2kote2@gmail.com"
+  ],
+  "license": "MIT",
+  "homepage": "https://kote2.tokyo",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

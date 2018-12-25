@@ -1,0 +1,60 @@
+/*==========================================================
+Respond
+===========================================================*/
+@mixin bp($value: md) {
+    @if $value == sm {
+        @media only screen and (max-width: bp(sm)) { @content };    //576
+    }
+    @if $value == md {
+        @media only screen and (max-width: bp(md)) { @content };     //768
+    }
+    @if $value == lg {
+        @media only screen and (max-width: bp(lg)) { @content };    //992
+    }
+    @if $value == xl {
+        @media only screen and (max-width: bp(xl)) { @content };    //1200
+    }
+}
+@mixin bp-min($value: md) {
+    @if $value == sm {
+        @media only screen and (min-width: bp(sm)) { @content };    //576
+    }
+    @if $value == md {
+        @media only screen and (min-width: bp(md)) { @content };     //768
+    }
+    @if $value == lg {
+        @media only screen and (min-width: bp(lg)) { @content };    //992
+    }
+    @if $value == xl {
+        @media only screen and (min-width: bp(xl)) { @content };    //1200
+    }
+}
+
+// @mixin respond($breakpoint) {
+//     @if $breakpoint == sm {
+//         @media only screen and (max-width: $g-sm) { @content };    //576
+//     }
+//     @if $breakpoint == md {
+//         @media only screen and (max-width: $g-md) { @content };     //768
+//     }
+//     @if $breakpoint == lg {
+//         @media only screen and (max-width: $g-lg) { @content };    //992
+//     }
+//     @if $breakpoint == xl {
+//         @media only screen and (max-width: $g-xl) { @content };    //1200
+//     }
+// }
+// @mixin respond-min($breakpoint) {
+//     @if $breakpoint == sm {
+//         @media only screen and (min-width: $g-sm) { @content };    //576
+//     }
+//     @if $breakpoint == md {
+//         @media only screen and (min-width: $g-md) { @content };     //768
+//     }
+//     @if $breakpoint == lg {
+//         @media only screen and (min-width: $g-lg) { @content };    //992
+//     }
+//     @if $breakpoint == xl {
+//         @media only screen and (min-width: $g-xl) { @content };    //1200
+//     }
+// }
